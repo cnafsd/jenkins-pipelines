@@ -46,7 +46,7 @@ pipeline {
               string(name: 'CDMI_ENDPOINT', value: ""),
               string(name: 'TESTSUITE_EXCLUDE', value: "${params.TESTSUITE_EXCLUDE}"),
               string(name: 'TESTSUITE_SUITE', value: "${params.TESTSUITE_SUITE}"),
-              string(name: 'STORM_STORAGE_ROOT_DIR', value: "/gpfs/gpfsobj/storage/"),
+              string(name: 'STORM_STORAGE_ROOT_DIR', value: "/gpfs/gpfsobj/storage"),
             ]
           }
         
