@@ -13,8 +13,9 @@ pipeline {
   }
   
   options {
-    timeout(time: 1, unit: 'HOURS')
+    timeout(time: 10, unit: 'MINUTES')
     buildDiscarder(logRotator(numToKeepStr: '5'))
+    disableConcurrentBuilds()
   }
 
   triggers { cron('H/20 * * * *') }
