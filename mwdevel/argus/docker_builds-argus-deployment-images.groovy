@@ -33,8 +33,6 @@ pipeline {
     stage('build images') {
       steps {
         parallel (
-          "centos6-allinone"   : { build_image('centos6', 'all-in-one') },
-          "centos6-distributed": { build_image('centos6', 'distributed') },
           "centos7-allinone"   : { build_image('centos7', 'all-in-one') },
           "centos7-distributed": { build_image('centos7', 'distributed') },
         )
