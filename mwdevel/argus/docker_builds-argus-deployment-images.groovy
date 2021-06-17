@@ -5,9 +5,11 @@ def build_image(platform, deployment){
     deleteDir()
     unstash "source"
 
-    dir("${deployment}") {
-      sh "PLATFORM=${platform} sh build-images.sh"
-      sh "PLATFORM=${platform} sh push-images.sh"
+    withDockerRegistry([ credentialsId: "dockerhub-enrico", url: "" ]) {
+      dir("${deployment}") {
+        sh "PLATFORM=${platform} sh build-images.sh"
+        sh "PLATFORM=${platform} sh push-images.sh"
+      }
     }
   }
 }
