@@ -25,7 +25,7 @@ pipeline {
 
   parameters {
     string(name: 'TESTSUITE_BRANCH', defaultValue: 'test_one', description: 'Which branch of storm-testsuite_runner' )
-    string(name: 'TESTSUITE_EXCLUDE', defaultValue: "to-be-fixedORcdmi", description: '')
+    string(name: 'TESTSUITE_EXCLUDE', defaultValue: "to-be-fixedORcdmiORxroot", description: '')
     string(name: 'TESTSUITE_SUITE', defaultValue: "tests", description: '')
   }
 
