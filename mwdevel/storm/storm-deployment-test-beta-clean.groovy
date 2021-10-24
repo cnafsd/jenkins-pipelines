@@ -32,7 +32,8 @@ pipeline {
                 string(name: 'STORM_TARGET_RELEASE', value: "beta"),
                 string(name: 'VOMS_TARGET_RELEASE', value: "stable"),
                 string(name: 'PKG_STORM_BRANCH', value: "none"),
-                string(name: 'PKG_VOMS_BRANCH', value: "none")
+                string(name: 'PKG_VOMS_BRANCH', value: "none"),
+                string(name: 'PUPPET_MODULE_BRANCH', value: "v4"),
               ], 
               wait: true, 
               propagate: false
