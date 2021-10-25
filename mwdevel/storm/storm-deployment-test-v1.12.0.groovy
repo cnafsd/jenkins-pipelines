@@ -31,7 +31,7 @@ pipeline {
               parameters: [
                 string(name: 'STORM_TARGET_RELEASE', value: "stable"),
                 string(name: 'VOMS_TARGET_RELEASE', value: "stable"),
-                string(name: 'PKG_STORM_BRANCH', value: "v1.11.20"),
+                string(name: 'PKG_STORM_BRANCH', value: "v1.12.0"),
                 string(name: 'PKG_VOMS_BRANCH', value: "none"),
                 string(name: 'PUPPET_MODULE_BRANCH', value: "v4"),
               ], 
