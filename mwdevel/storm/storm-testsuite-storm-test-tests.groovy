@@ -44,8 +44,8 @@ pipeline {
               runner_job = build job: "${env.JOB_NAME}/${params.TESTSUITE_BRANCH}", propagate: false, parameters: [
                 string(name: 'STORM_BACKEND_HOSTNAME', value: "storm-test.cr.cnaf.infn.it"),
                 string(name: 'STORM_FRONTEND_HOSTNAME', value: "storm-test.cr.cnaf.infn.it"),
-                string(name: 'STORM_WEBDAV_HOSTNAME', value: "transfer-test.cr.cnaf.infn.it"),
-                string(name: 'STORM_GRIDFTP_HOSTNAME', value: "transfer-test.cr.cnaf.infn.it"),
+                string(name: 'STORM_WEBDAV_HOSTNAME', value: "xfer-test.cr.cnaf.infn.it"),
+                string(name: 'STORM_GRIDFTP_HOSTNAME', value: "xfer-test.cr.cnaf.infn.it"),
                 string(name: 'CDMI_ENDPOINT', value: ""),
                 string(name: 'TESTSUITE_EXCLUDE', value: "${params.TESTSUITE_EXCLUDE}"),
                 string(name: 'TESTSUITE_SUITE', value: "${params.TESTSUITE_SUITE}"),
