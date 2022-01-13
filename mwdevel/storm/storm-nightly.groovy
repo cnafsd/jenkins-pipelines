@@ -31,13 +31,13 @@ pipeline {
 
   post {
     failure {
-      slackSend channel: '#storm', color: 'danger', message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Failure (<${env.BUILD_URL}|Open>)"
+      slackSend channel: '#ci-cloud', color: 'danger', message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Failure (<${env.BUILD_URL}|Open>)"
     }
     
     changed {
       script{
         if('SUCCESS'.equals(currentBuild.currentResult)) {
-          slackSend channel: '#storm', color: 'good', message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Back to normal (<${env.BUILD_URL}|Open>)"
+          slackSend channel: '#ci-cloud', color: 'good', message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Back to normal (<${env.BUILD_URL}|Open>)"
         }
       }
     }
