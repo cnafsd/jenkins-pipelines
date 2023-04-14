@@ -5,14 +5,7 @@ def kubeLabel = getKubeLabel()
 def runner_job
 
 pipeline {
-  agent {
-    kubernetes {
-      label "${kubeLabel}"
-      cloud 'Kube mwdevel'
-      defaultContainer 'runner'
-      inheritFrom 'ci-template'
-    }
-  }
+  agent { label 'docker' }
 
   options {
     timeout(time: 3, unit: 'HOURS')
