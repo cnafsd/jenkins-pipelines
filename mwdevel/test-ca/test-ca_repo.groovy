@@ -15,7 +15,7 @@ pipeline {
         cleanWs()
           step([
               $class: 'CopyArtifact',
-              projectName: "test-ca/master",
+              projectName: "igi-test-ca/master",
               filter: '**',
               fingerprintArtifacts: true,
               target: './yum'
